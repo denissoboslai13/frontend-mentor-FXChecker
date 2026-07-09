@@ -6,7 +6,7 @@ export const View = ({ view, setView, viewOpen, setViewOpen, views, favorites, l
   const logFilter = user ? logs.filter(l => l.user.id == user.id) : logs.filter(l => !l.user)
 
     return (
-        <div className='p-4 xl:px-40 lg:px-20'>
+        <div className='p-4 xl:px-40 lg:px-20 bg-black'>
             {!(isDesktop) && (
                 <button className='bg-[#171719] text-white rounded-md border border-[#2E2E2E] w-full px-4 py-2' onClick={() => setViewOpen(p => !p)}>
                     <div className='flex flex-row justify-between'>

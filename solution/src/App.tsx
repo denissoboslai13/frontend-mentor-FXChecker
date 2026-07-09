@@ -259,7 +259,7 @@ function App() {
   }
 
   return (
-    <div className='font-["Jetbrains_Mono"] min-w-[375px] bg-black h-[100vh]'>
+    <div className='font-["Jetbrains_Mono"] min-w-[375px] bg-black min-h-screen'>
       <AnimatePresence>
         {success && (
           <Success success={success} setSuccess={setSuccess} key={success}/>
