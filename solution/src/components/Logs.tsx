@@ -1,6 +1,5 @@
-import arrowRight from '../../../starter-code/assets/images/icon-arrow-right.svg'
-import trashCan from '../../../starter-code/assets/images/icon-delete.svg'
-import { monthName } from "../helpers/formatting"
+import arrowRight from '../assets/images/icon-arrow-right.svg'
+import trashCan from '../assets/images/icon-delete.svg'
 import { motion } from 'motion/react'
 
 export const Logs = ({ logs, user, removeLog }) => {

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react'
-import chevronDown from '../../../starter-code/assets/images/icon-chevron-down.svg'
+import chevronDown from '../assets/images/icon-chevron-down.svg'
 
 export const View = ({ view, setView, viewOpen, setViewOpen, views, favorites, logs, user, isDesktop }) => {
   const faveFilter = user ? favorites.filter(f => f.user.id == user.id) : favorites.filter(f => !f.user) 

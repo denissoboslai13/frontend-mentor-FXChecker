@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import arrowRight from '../../../starter-code/assets/images/icon-arrow-right.svg'
-import StarFilled from '../../../starter-code/assets/images/icon-star-filled.svg?react'
+import arrowRight from '../assets/images/icon-arrow-right.svg'
+import StarFilled from '../assets/images/icon-star-filled.svg?react'
 import { motion } from 'motion/react'
 
 import { getGraphs, getRate } from '../helpers/getData'

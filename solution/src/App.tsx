@@ -27,6 +27,7 @@ import { Register } from './components/Register'
 import { UserScreen } from './components/UserScreen'
 import { Logout } from './components/Logout'
 
+
 const views = ['HISTORY', 'COMPARE', 'FAVORITES', 'LOGGED']
 
 function App() {
@@ -55,7 +56,6 @@ function App() {
   const [error, setError] = useState('')
 
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   const navigate = useNavigate()
 
@@ -119,7 +119,7 @@ function App() {
     setQuote(help)
   }
   
-  const handleLogin = async (event) => {
+  const handleLogin = async (event: any) => {
     event.preventDefault()
     console.log("logging in with", username, password);
 
@@ -140,7 +140,7 @@ function App() {
     }
   };
 
-  const handleRegister = async (event) => {
+  const handleRegister = async (event: any) => {
     event.preventDefault()
     console.log("registering with", name, username, password);
 
@@ -163,7 +163,7 @@ function App() {
     navigate("/")
   };
 
-  const createFavorite = async (fave) => {
+  const createFavorite = async (fave: any) => {
     if (!user) {
       setFavorites(p => p.concat({ base: fave.base, quote: fave.quote, id: Date.now() }))
       setSuccess(`Successfully favorited ${fave.base} to ${fave.quote}! Log in to save permanently!`)

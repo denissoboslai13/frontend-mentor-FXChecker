@@ -1,17 +1,16 @@
-import chevronDown from '../../../starter-code/assets/images/icon-chevron-down.svg'
-import exVert from '../../../starter-code/assets/images/icon-exchange-vertical.svg'
-import exHor from '../../../starter-code/assets/images/icon-exchange.svg'
-import starEmpty from '../../../starter-code/assets/images/icon-star.svg'
-import StarFull from '../../../starter-code/assets/images/icon-star-filled.svg?react'
-import searchIcon from '../../../starter-code/assets/images/icon-search.svg'
+import chevronDown from '../assets/images/icon-chevron-down.svg'
+import exVert from '../assets/images/icon-exchange-vertical.svg'
+import exHor from '../assets/images/icon-exchange.svg'
+import starEmpty from '../assets/images/icon-star.svg'
+import StarFull from '../assets/images/icon-star-filled.svg?react'
 import { AnimatePresence, motion } from 'motion/react'
 
 const flags: Record<string, string> = import.meta.glob(
-  '../../../starter-code/assets/images/flags/*.webp',
+  '../assets/images/flags/*.webp',
   { eager: true, import: 'default' }
 )
 
-const getFlag = (code: string) => flags[`../../../starter-code/assets/images/flags/${code.toLowerCase()}.webp`]
+const getFlag = (code: string) => flags[`../assets/images/flags/${code.toLowerCase()}.webp`]
 
 const currencies = {
   AED: { flag: getFlag('ae'), name: 'UAE Dirham' },

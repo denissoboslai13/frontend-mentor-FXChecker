@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 import { getRate } from "../helpers/getData"
 import { motion } from "motion/react"
-import StarFilled from '../../../starter-code/assets/images/icon-star-filled.svg?react'
-import starEmpty from '../../../starter-code/assets/images/icon-star.svg'
+import StarFilled from '../assets/images/icon-star-filled.svg'
+import starEmpty from '../assets/images/icon-star.svg'
 
 const flags: Record<string, string> = import.meta.glob(
-  '../../../starter-code/assets/images/flags/*.webp',
+  '../assets/images/flags/*.webp',
   { eager: true, import: 'default' }
 )
 
-const getFlag = (code: string) => flags[`../../../starter-code/assets/images/flags/${code.toLowerCase()}.webp`]
+const getFlag = (code: string) => flags[`../assets/images/flags/${code.toLowerCase()}.webp`]
 
 const currencies = {
   AED: { flag: getFlag('ae'), name: 'UAE Dirham' },
