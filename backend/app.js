@@ -26,7 +26,10 @@ app.use(express.static("dist"));
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://your-frontend.vercel.app"],
+    origin: [
+      "http://localhost:5173",
+      "https://frontend-mentor-fx-checker-eight.vercel.app",
+    ],
   }),
 );
 app.use(middleware.requestLogger);
