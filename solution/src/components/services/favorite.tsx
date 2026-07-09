@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "/api/favorites";
+const baseUrl = "https://frontend-mentor-fxchecker.onrender.com/api/favorites";
 
 let token = null;
 

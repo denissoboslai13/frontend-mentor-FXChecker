@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "/api/login";
+const baseUrl = "https://frontend-mentor-fxchecker.onrender.com/api/login";
 
 const login = async (credentials) => {
     console.log('creds: ', credentials)

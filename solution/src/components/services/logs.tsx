@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "/api/logs";
+const baseUrl = "https://frontend-mentor-fxchecker.onrender.com/api/logs";
 
 let token = null;
 
