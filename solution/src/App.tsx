@@ -136,7 +136,7 @@ function App() {
       setTimeout(() => setSuccess(''), 3000)
       navigate('/')
     } catch {
-      setError(`Couldn't register! Please try again later!`)
+      setError(`Couldn't log in! Please try again!`)
       setTimeout(() => setError(''), 3000)
       console.log("caught error in login")
     }
@@ -165,6 +165,8 @@ function App() {
     window.localStorage.clear()
     setUser("")
     navigate("/")
+    setSuccess(`Successfully logged out!`)
+    setTimeout(() => setSuccess(''), 3000)
   };
 
   const createFavorite = async (fave: any) => {
