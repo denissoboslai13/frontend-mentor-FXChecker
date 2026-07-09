@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getRate } from "../helpers/getData"
 import { motion } from "motion/react"
-import StarFilled from '../assets/images/icon-star-filled.svg'
+import StarFilled from '../assets/images/icon-star-filled.svg?react'
 import starEmpty from '../assets/images/icon-star.svg'
 
 const flags: Record<string, string> = import.meta.glob(
