@@ -142,6 +142,13 @@ function App() {
     }
   };
 
+  const handleBack = (pos: any) => {
+    navigate(pos)
+    setName("")
+    setUsername("")
+    setPassword("")
+  }
+
   const handleRegister = async (event: any) => {
     event.preventDefault()
     console.log("registering with", name, username, password);
@@ -163,6 +170,9 @@ function App() {
 
   const handleLogout = () => {
     window.localStorage.clear()
+    setName("")
+    setUsername("")
+    setPassword("")
     setUser("")
     navigate("/")
     setSuccess(`Successfully logged out!`)
@@ -297,9 +307,9 @@ function App() {
         </>}>
         </Route>
         <Route path='/user' element={<UserScreen navigate={navigate} user={user}/>} />
-        <Route path='/login' element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} handleLogin={handleLogin} navigate={navigate}/>} />
+        <Route path='/login' element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} handleLogin={handleLogin} handleBack={handleBack}/>} />
         <Route path='/logout' element={<Logout handleLogout={handleLogout} navigate={navigate}/>}/>
-        <Route path='/register' element={<Register name={name} username={username} password={password} setName={setName} setUsername={setUsername} setPassword={setPassword} handleRegister={handleRegister} navigate={navigate}/>} />
+        <Route path='/register' element={<Register name={name} username={username} password={password} setName={setName} setUsername={setUsername} setPassword={setPassword} handleRegister={handleRegister} handleBack={handleBack}/>} />
       </Routes>
     </div>
   )
