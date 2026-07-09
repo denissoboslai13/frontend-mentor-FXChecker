@@ -291,9 +291,9 @@ function App() {
         </>}>
         </Route>
         <Route path='/user' element={<UserScreen navigate={navigate} user={user}/>} />
-        <Route path='/login' element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} handleLogin={handleLogin} user={user}/>} />
-        <Route path='/logout' element={<Logout handleLogout={handleLogout} />}/>
-        <Route path='/register' element={<Register name={name} username={username} password={password} setName={setName} setUsername={setUsername} setPassword={setPassword} handleRegister={handleRegister}/>} />
+        <Route path='/login' element={<Login username={username} password={password} setUsername={setUsername} setPassword={setPassword} handleLogin={handleLogin} navigate={navigate}/>} />
+        <Route path='/logout' element={<Logout handleLogout={handleLogout} navigate={navigate}/>}/>
+        <Route path='/register' element={<Register name={name} username={username} password={password} setName={setName} setUsername={setUsername} setPassword={setPassword} handleRegister={handleRegister} navigate={navigate}/>} />
       </Routes>
     </div>
   )

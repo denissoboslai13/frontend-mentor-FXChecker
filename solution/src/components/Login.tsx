@@ -1,4 +1,4 @@
-export const Login = ({ username, password, setUsername, setPassword, handleLogin, user }) => {
+export const Login = ({ username, password, setUsername, setPassword, handleLogin, navigate }) => {
     return (
         <div className="bg-black h-[100vh] text-white flex flex-row items-center justify-center">
             <div className="bg-[#202022] rounded-2xl border border-[#2E2E2E] px-6 py-4">
@@ -15,7 +15,10 @@ export const Login = ({ username, password, setUsername, setPassword, handleLogi
                             <input type="password" value={password} onChange={({ target }) => setPassword(target.value)} className="outline-white outline-1 rounded-lg px-2 py-1"/>
                         </label>
                     </div>
-                    <button type="submit" className="border border-white px-4 rounded-lg py-1 cursor-pointer">Login</button>
+                    <div className="flex flex-row gap-4">
+                        <button type="submit" className="border border-white px-4 rounded-lg py-1 cursor-pointer">Login</button>
+                        <button onClick={() => navigate('/user')} className="border border-white px-4 rounded-lg py-1 cursor-pointer">Back</button>
+                    </div>
                 </form>
             </div>
         </div>

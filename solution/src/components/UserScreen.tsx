@@ -6,6 +6,7 @@ export const UserScreen = ({ navigate, user }) => {
                 {!(user) && (
                     <button onClick={() => navigate('/register')} className="border border-white px-4 rounded-lg py-1 cursor-pointer">Register</button>
                 )}
+                <button onClick={() => navigate('/')} className="border border-white px-4 rounded-lg py-1 cursor-pointer">Back</button>
             </div>
         </div>
     )

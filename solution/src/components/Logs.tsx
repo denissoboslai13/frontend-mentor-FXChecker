@@ -36,9 +36,8 @@ export const Logs = ({ logs, user, removeLog }) => {
             <div className='bg-[#171719] p-4 rounded-xl'>
                 <div className='xl:flex xl:flex-row xl:justify-between'>
                     <h1 className='text-lg xl:text-xl'>CONVERSION LOG</h1>
-                        <div className='flex flex-row justify-between mb-4 items-center xl:gap-4'>
+                        <div className='flex flex-row justify-between mb-6 items-center xl:gap-4'>
                             <p className='text-[#9D9D9D] text-sm'>{filtered.length} LOGGED</p>
-                            <button className='bg-[#202022] border border-[#3D3D3D] text-[#9D9D9D] px-2.5 py-1.5 rounded-lg text-sm focus:outline-2 focus:outline-solid focus:outline-[#CEF739]'>CLEAR ALL</button>
                         </div>
                 </div>
             
