@@ -136,6 +136,8 @@ function App() {
       setTimeout(() => setSuccess(''), 3000)
       navigate('/')
     } catch {
+      setError(`Couldn't register! Please try again later!`)
+      setTimeout(() => setError(''), 3000)
       console.log("caught error in login")
     }
   };
@@ -153,6 +155,8 @@ function App() {
       setSuccess(`Successfully registered! Please log in!`)
       setTimeout(() => setSuccess(''), 3000)
     } catch {
+      setError(`Couldn't register! Please try again later!`)
+      setTimeout(() => setError(''), 3000)
       console.log("caught error in login")
     }
   };
@@ -201,7 +205,7 @@ function App() {
       setSuccess(`Successfully logged ${r.base} to ${r.quote} for ${r.amount} ${r.base}!`),
       setTimeout(() => setSuccess(''), 3000)
     } catch {
-      setError("Couldn't favorite, try again!")
+      setError("Couldn't log, try again!")
       setTimeout(() => setError(''), 3000)
     }
   }
